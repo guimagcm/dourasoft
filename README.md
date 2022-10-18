@@ -1,94 +1,46 @@
-# Roteiro da Solução do Desafio DouraSoft - por Guilherme Marra
+# DouraSoft
 
-Desafio Desenvolvimento Web - DouraSoft (Versão VueJs + Quasar)
+Desafio Programador Web - DouraSoft
 
-## Descrição
-Desenvolvimento de um CRUD de cadastro de produtos NodeJs - VueJs/Quasar - **PostgreSQL**
+Desenvolvimento de um CRUD de cadastro de produtos em PHP ou Javascript e **PostgreSQL**
 
-Framework/stack utilizado para Backend (server): 
-[node.js + express + pg lib (Postgres)]()
+## Deverá conter
+**Produtos**: ID, Codigo, Nome, Descrição e Preço
 
-Framework/stack utilizado para Frontend (client): 
-[node.js + vuejs + quasar]()
+**Clientes**: ID, Nome, Telefone, Endereço
 
-Banco de Dados: ElephantSQL (Posgres) em nuvem
+**Pedidos**: ID, Cliente, Total, Data, Status(Aberto, Entregue, Cancelado), Lista de Produtos (Produto, Quantidade, Valor Unitário e Valor Total).
 
-## Scripts SQL do PostgreSQL:
+## Instruções
 
-	Arquivos na pasta "Server": 	
-		
-		dbase-v0.5.sql 
-		dbase-v0.6.sql
-		dbase-v0.7.sql 
+1. Faça um fork do projeto para sua conta pessoal
+2. Crie uma branch com o padrão: `desafio-seu-nome`
+3. Submeta seu código criando um Pull Request
 
+## Como o Sistema Deve Funcionar
 
-## Manual de instalação e inicialização para Ubuntu 22.04 lts:
+ - Deve possuir uma Listagem/Inclusão/Edição/Exclusão de Produtos
+ - Deve possuir uma Listagem/Inclusão/Edição/Exclusão de Clientes
+ - Deve possuir uma Listagem/Inclusão/Edição/Exclusão de Pedidos com possibilidade de detalhar o pedido
+ - A tela de pedidos deve possuir a pesquisa e inclusão de clientes caso o cliente não exista
+ - Lembre-se um pedido tem uma lista de itens (Quantidade, Produto, Valor Unitário e Valor Total)
 
-1 - Realizar update do Ubuntu 22.04
+## Você pode
 
-    sudo apt update
+- Utilizar qualquer Framework PHP ou Javascript. Caso opte por não utilizar, desenvolver nos padrões de projeto MVC
+- Utilizar composer ou npm
+- Utilizar quaisquer bibliotecas ou frameworks Javascript como VueJS, React, jQuery ou outras
+- Utilizar quaisquer frameworks CSS como Bootstrap, Materialize ou outras
 
-2 - Instalar node.js v18.11.0:
+## Não esqueça de
 
-    user@host:~$ sudo apt install nodejs
+- Manter o script sql junto da sua aplicação. De preferencia ao Migrations.
+- Criar um manual de como instalar seu sistema
 
-3 - Instalar o gestor de pacotes do node - npm v8.12.1:
+## Dúvidas:question:
 
-    user@host:~$ sudo apt install npm
+Abra uma [issue](https://github.com/paulop/dourasoft/issues/new)
 
-4 - Clonar o repositório do github em uma pasta (exemplo: "user@host:~$"):
+Ou envie um email para: **paulo@dourasoft.com.br**
 
-	user@host:~$ git clone "endereco_http"
-
-5 - Entrar na pasta e realizar o git checkout no branch "desafio-guimarra"
-
-	user@host:~$ cd dourasoft
-
-	user@host:~/dourasoft$ git checkout desafio-guimarra
-    
-6 - Entrar na pasta server e Instalar dependencias:
-
-	user@host:~/dourasoft$ cd server
-
-	user@host:~/dourasoft/server$ npm install
-
-
-7 - Instalar dependencias pasta client:
-
-	user@host:~/dourasoft$ cd client
-
-	user@host:~/dourasoft/client$ npm install
-
-8 - Banco de dados: foram utilizados no desenvolvimento banco de dados em servidor local e também banco de dados em nuvem. Por praticidade, o banco de dados configurado atualmente está implementado externamente na nuvem (PostgreSQL - ElephantSQL):
-
-	As credenciais de acesso ao ElephantSQL estão em um arquivo .env enviado no email paulo@dourasoft.com.br .  
-
-	Este arquivo .env deve ser inserido dentro da pasta "server" neste momento.
-
-9 - Em caso de se manter em uso do Banco de Dados em nuvem, pular este passo. Caso desejar utilizar banco Postgres local, deve-se:
-
-### a - instalar o PosgreSQL seguindo o roteiro deste link [link](https://www.postgresql.org/download/linux/ubuntu/)
-
-### b - instalar o pgAdmin4 mostrado no roteiro deste [link](https://www.pgadmin.org/download/pgadmin-4-apt/) 
-
-
-10 - Inicializar o server em um terminal a partir da **pasta server** (recomendado vscode com 02 terminais em modo split): 
-
-	user@host:~/dourasoft/server$ nodemon
-
-11 - Inicializar o client em outro terminal a partir da **pasta client**: 
-
-	user@host:~/dourasoft/client$ npm start
-
-12 - Uma instância do navegador deverá abrir o endereço http://localhost:3000 com o projeto
-
-
-
-
-## Dúvidas:
-
-WhatsApp: **67 9 9976 9781**
-
-Ou envie um email para: **guicmarra@gmail.com**
-
-
+Boa sorte! :muscle:
